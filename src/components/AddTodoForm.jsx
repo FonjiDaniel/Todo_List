@@ -28,7 +28,7 @@ const AddTodoForm = ({Addtodo}) => {
       value={text}
       placeholder='enter Task for Today'
       onChange={(e)=>setText(e.target.value)}/>
-      <button   className='hover:bg-red-50 px-7 pt- rounded-2xl ' type='submit'>Add to List</button>
+      <button   className='hover:bg-blue-200 px-7 pt- rounded-2xl ' type='submit'>Add to List</button>
       </form>
      
       
