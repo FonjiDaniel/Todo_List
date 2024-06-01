@@ -11,14 +11,14 @@ const App = () => {
     const storedTodos = JSON.parse(localStorage.getItem("todos"));
     if(storedTodos){
      setTodos(storedTodos);
-    }
+    }else{setTodos([])}
  } ,[])
 
 
   const [text, setText] = useState("");
 
   const AddTodo = (text) => {
-    setTodos((prevTodos) => [{ id: uuidv4() , text }, ...prevTodos]);
+    setTodos((prevTodos) => [ ...prevTodos  ,  {   id: uuidv4() , text} ,]);
     console.log(todos);
     localStorage.setItem("todos", JSON.stringify(todos))
   };
